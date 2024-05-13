@@ -159,7 +159,7 @@ function getBaselayers() {
       "https://geoservices.wallonie.be/arcgis/services/PLAN_REGLEMENT/ATLAS_VV_MODIF/MapServer/WMSServer?",
       {
         format: "image/png",
-        layers: "3,4",
+        layers: "0,3",
         transparent: false,
         attribution: "SPW"
       }

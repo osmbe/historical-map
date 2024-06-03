@@ -18,8 +18,8 @@
   L.control
     .attribution({
       prefix:
-        '<a target="_blank" href="https://github.com/osmbe/historic">Source code available</a>.' +
-        '<a target="_blank" href="https://github.com/osmbe/historic/issues">Post Issues or comments here</a> or <a href="mailto:joost.schouppe@gmail.com">contact the author</a>.'
+        '<a target="_blank" href="https://github.com/osmbe/historical-map">Source code available</a>.' +
+        '<a target="_blank" href="https://github.com/osmbe/historical-map/issues">Post Issues or comments here</a> or <a href="mailto:joost.schouppe@gmail.com">contact the author</a>.'
     })
     .addTo(map);
 

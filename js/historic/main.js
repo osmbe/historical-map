@@ -5,7 +5,7 @@
   var map = L.map("map", {
     center: [50.8398, 4.4247],
     zoom: 11,
-    layers: [baselayers["NGI Basemap 1873"], layers["OSM roads"]],
+    layers: [baselayers["NGI Basemap 1873"], layers["Wegenregister (VL)"]],
     attributionControl: false
   });
 

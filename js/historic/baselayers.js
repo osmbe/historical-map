@@ -129,7 +129,7 @@ function getBaselayers() {
       }
     ),
     "Ferraris (1777, WAL)": L.tileLayer.wms(
-      "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?",
+      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/FERRARIS/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",
@@ -138,7 +138,7 @@ function getBaselayers() {
       }
     ),
     "Forêt de Soignes (1661, WAL)": L.tileLayer.wms(
-      "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?",
+      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",
@@ -171,7 +171,7 @@ function getBaselayers() {
       }
     ),
     "Vandermaelen (1846-1854, WAL)": L.tileLayer.wms(
-      "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?",
+      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/VDML/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",
@@ -186,7 +186,7 @@ function getBaselayers() {
       }
     ),
     "Carte du dépôt de la guerre (1865 - 1880, WAL)": L.tileLayer.wms(
-      "http://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/DEPOT_GUERRE_1865_1880/MapServer/WMSServer?",
+      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/DEPOT_GUERRE_1865_1880/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",
@@ -222,7 +222,7 @@ function getBaselayers() {
       }
     ),
     "Plans du Ministère des Travaux publics (1950-1973, WAL)": L.tileLayer.wms(
-      "http://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PLANS_TRAVAUXPUBLICS_1950_1973/MapServer/WMSServer?",
+      "https://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PLANS_TRAVAUXPUBLICS_1950_1973/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0,1",

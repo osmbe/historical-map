@@ -152,7 +152,6 @@ function getBaselayers() {
         layers: "0",
         transparent: false,
         attribution: "SPW",
-        maxZoom: 16
       }
     ),
     "Atlas der Buurtwegen (1840, FL)": L.tileLayer.wms(

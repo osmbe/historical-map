@@ -2,7 +2,7 @@ function getBaselayers() {
   return {
     "OSM.org": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-      maxZoom: 18
+      maxZoom: 19
       }
     ),
     "OSM Belgium": L.tileLayer(
@@ -50,7 +50,15 @@ function getBaselayers() {
     "Most recent aerial imagery (FL)": L.tileLayer(
       "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
-        attribution: "Luchtfoto © Digitaal Vlaanderen"
+        attribution: "Luchtfoto © Digitaal Vlaanderen",
+        maxZoom: 21
+      }
+    ),
+    "grootschalig, winteropnamen, kleur, 2013-2015": L.tileLayer(
+      "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
+      {
+        attribution: "Luchtfoto © Digitaal Vlaanderen",
+        maxZoom: 21
       }
     ),
     "GRB basemap (FL)": L.tileLayer(
@@ -138,12 +146,13 @@ function getBaselayers() {
       }
     ),
     "Forêt de Soignes (1661, WAL)": L.tileLayer.wms(
-      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer",
+      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?FORMAT=image/png",
       {
         format: "image/png",
         layers: "0",
         transparent: false,
-        attribution: "SPW"
+        attribution: "SPW",
+        maxZoom: 16
       }
     ),
     "Atlas der Buurtwegen (1840, FL)": L.tileLayer.wms(

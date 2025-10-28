@@ -146,7 +146,7 @@ function getBaselayers() {
       }
     ),
     "Forêt de Soignes (1661, WAL)": L.tileLayer.wms(
-      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?FORMAT=image/png",
+      "https://geoservices.wallonie.be/arcgis/services/CARTES_ANCIENNES/SOIGNES_VANDERSTOCK_1661/MapServer/WMSServer?",
       {
         format: "image/png",
         layers: "0",

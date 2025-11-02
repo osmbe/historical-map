@@ -64,7 +64,9 @@ function getBaselayers() {
     "GRB basemap (FL)": L.tileLayer(
       "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
-        attribution: "GRB © Digitaal Vlaanderen"
+        attribution: "GRB © Digitaal Vlaanderen",
+        maxZoom: 21
+
       }
     ),
     "SPW Hillshade (WAL, 2021-2022)": L.tileLayer.wms(

@@ -54,7 +54,7 @@ function getBaselayers() {
         maxZoom: 21
       }
     ),
-    "grootschalig, winteropnamen, kleur, 2013-2015": L.tileLayer(
+    "High res winter aerial imagery (FL, 2013-2015)": L.tileLayer(
       "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
       {
         attribution: "Luchtfoto © Digitaal Vlaanderen",

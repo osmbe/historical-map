@@ -8,6 +8,8 @@
     layers: [baselayers["NGI Basemap 1873"]],
     attributionControl: false
   });
+  layers["OpenStreetMap Roads"].addTo(map);
+
 
   L.Control.geocoder({
     position: "topleft"

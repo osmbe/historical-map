@@ -10,6 +10,11 @@
   });
   layers["OpenStreetMap Roads"].addTo(map);
 
+  map.addControl(new L.Control.Scale({
+    maxWidth: 200, 
+    position: 'bottomleft', 
+    imperial: false
+  }));
 
   L.Control.geocoder({
     position: "topleft"

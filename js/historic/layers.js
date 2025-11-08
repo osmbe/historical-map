@@ -1,5 +1,10 @@
 function getLayers() {
   return {
+    "OpenStreetMap Roads": L.maplibreGL({
+      style: getVectorTileStyle(),
+      attribution: "© OpenStreetMap, tiles by OpenFreeMap",
+      pane: 'overlayPane'      
+    }),
     "DV Hillshade (soft, FL, 2013-2015)": L.tileLayer(
       "https://geo.api.vlaanderen.be/DHMV/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=DHMV_II_HILL_25cm&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+	<link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+	<script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
     <!-- overrule default style to set maxwidth of the layer control -->
     <style>
         body {
@@ -31,15 +33,19 @@
 
 <body>
     <div id="map"></div>
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  	<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.20/leaflet-maplibre-gl.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
         charset="utf-8"></script>
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="./js/leaflet.uGeoJSON.js"></script>
     <script src="./js/leaflet-fullHash.js"></script>
-    <script src="./js/historic/baselayers.js"></script>
+    <script src="./js/historic/vector-style.js"></script>
+	  <script src="./js/historic/baselayers.js"></script>
     <script src="./js/historic/layers.js"></script>
     <script src="./js/historic/main.js"></script>
+	
 </body>
 
 </html>

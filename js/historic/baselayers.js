@@ -108,12 +108,6 @@ function getBaselayers() {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
-    "Pourbus, Brugge (1571)": L.tileLayer(
-      "https://www.pourbuskaart.museabrugge.be/assets/map-data/pourbus-map/{z}/{y}/{x}",
-      {
-        attribution: '<a href="http://www.museabrugge.be/">musea Brugge</a>'
-      }
-    ),
     "Masse, Westhoek only (1729)": L.tileLayer.wms(
       "https://geo.api.vlaanderen.be/histcart/wms?", // Doesn't seem to be available in WMTS
       {

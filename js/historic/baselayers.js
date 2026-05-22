@@ -47,13 +47,23 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),   
-    "Most recent aerial imagery (FL)": L.tileLayer(
-      "https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+    "Most recent aerial imagery (FL+WAL)": L.layerGroup([
+	L.tileLayer(
+	"https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
       {
         attribution: "Luchtfoto © Digitaal Vlaanderen",
         maxZoom: 21
       }
     ),
+	L.tileLayer.wms(
+      "https://geoservices.wallonie.be/arcgis/services/IMAGERIE/ORTHO_LAST/MapServer/WMSServer?",
+      {
+        format: "image/png",
+        layers: "0",
+        transparent: true,
+        attribution: "SPW"
+      })
+	  ]),
     "High res winter aerial imagery (FL, 2013-2015)": L.tileLayer(
       "https://geo.api.vlaanderen.be/OGW/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=ogwrgb13_15vl&STYLE=&FORMAT=image/png&TILEMATRIXSET=GoogleMapsVL&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
       {
@@ -61,14 +71,20 @@ function getBaselayers() {
         maxZoom: 21
       }
     ),
-    "GRB basemap (FL)": L.tileLayer(
-      "https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+	"GRB + PÏCC basemaps (VL+WAL)": L.layerGroup([
+	  L.tileLayer.wms(
+      "https://geoservices.wallonie.be/arcgis/services/TOPOGRAPHIE/PICC_VDIFF/MapServer/WmsServer?",
       {
-        attribution: "GRB © Digitaal Vlaanderen",
-        maxZoom: 21
-
+        format: "image/png",
+        layers: "1,3,4,5,7,9,10,11,12,13,14,16,17,19,21,22,23,24,26,27,28,29,31",
+        transparent: true,
+        attribution: "SPW"
       }
     ),
+	  L.tileLayer("https://geo.api.vlaanderen.be/GRB/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=grb_bsk&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
+		{ attribution: "GRB © Digitaal Vlaanderen", maxZoom: 21}
+	  )
+	]),
     "SPW Hillshade (WAL, 2021-2022)": L.tileLayer.wms(
       "https://geoservices.wallonie.be/arcgis/services/RELIEF/WALLONIE_MNT_2021_2022_HILLSHADE/MapServer/WMSServer?",
       {

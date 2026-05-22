@@ -90,24 +90,82 @@ function getBaselayers() {
         attribution: "DHM SVF © Digitaal Vlaanderen"
       }
     ),
-    "NGI ortho 1947-1954": L.tileLayer(
-      "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1947-1954/MapServer/tile/{z}/{y}/{x}",
+	"NGI Historical Orthophotos 1940s-1950s": L.layerGroup([
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1940s/1.0.0/orthophoto_1947/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1940s/1.0.0/orthophoto_1948/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1950/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1951/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1952/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1950s/1.0.0/orthophoto_1954/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  )
+	]),
+	"NGI Historical Orthophotos 1966-1979": L.layerGroup([
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1971/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1960s/1.0.0/orthophoto_1969/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1970/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1977/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1978/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_1970s/1.0.0/orthophoto_1979/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  )
+	]),
+    "NGI Historical Orthophotos 1995": L.tileLayer(
+      "https://wmts.ngi.be/orthophotos_1990s/1.0.0/orthophoto_1995/default/3857/latest/{z}/{y}/{x}.png",
       {
         attribution: '<a href="http://www.ngi.be/">NGI</a>'
       }
     ),
-      "NGI ortho 1969-1979": L.tileLayer(
-      "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1969-1979/MapServer/tile/{z}/{y}/{x}",
-      {
-        attribution: '<a href="http://www.ngi.be/">NGI</a>'
-      }
-    ),
-      "NGI ortho 1995": L.tileLayer(
-      "https://wmts.ngi.be/arcgis/rest/services/ortho__default__3857__1995/MapServer/tile/{z}/{y}/{x}",
-      {
-        attribution: '<a href="http://www.ngi.be/">NGI</a>'
-      }
-    ),
+   "NGI Historical Orthophotos 2006-2009": L.layerGroup([
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2006/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2007/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2008/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  ),
+	  L.tileLayer(
+		"https://wmts.ngi.be/orthophotos_2000s/1.0.0/orthophoto_2009/default/3857/latest/{z}/{y}/{x}.png",
+		{ attribution: '<a href="http://www.ngi.be/">NGI</a>'}
+	  )
+	]),
     "Masse, Westhoek only (1729)": L.tileLayer.wms(
       "https://geo.api.vlaanderen.be/histcart/wms?", // Doesn't seem to be available in WMTS
       {

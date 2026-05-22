@@ -1,17 +1,5 @@
 function getBaselayers() {
   return {
-    "OSM.org": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-      maxZoom: 19
-      }
-    ),
-    "OSM Belgium": L.tileLayer(
-      "https://tile.osm.be/osmbe/{z}/{x}/{y}.png",
-      {
-        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,  <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>',
-        maxZoom: 18
-      }
-    ),
     "OSM Belgium (FR)": L.tileLayer(
       "https://tile.osm.be/osmbe-fr/{z}/{x}/{y}.png",
       {
@@ -26,27 +14,54 @@ function getBaselayers() {
         maxZoom: 18
       }
     ),
-    "OSM Belgium Archive - March 2019": L.tileLayer(
-      "https://tile.osm.be/archive/201903/{z}/{x}/{y}.png",
+	"OSM.org": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      maxZoom: 19
+      }
+    ),
+    "OSM Belgium": L.tileLayer(
+      "https://tile.osm.be/osmbe/{z}/{x}/{y}.png",
+      {
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,  <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://champs-libres.coop/">Champs-Libres</a>',
+        maxZoom: 18
+      }
+    ),
+	"OSM Belgium Archive - May 2025": L.tileLayer(
+      "https://tile.osm.be/archive/202505/{z}/{x}/{y}.png",
       {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
     ),
-    "OSM Belgium Archive - November 2020": L.tileLayer(
-      "https://tile.osm.be/archive/202011/{z}/{x}/{y}.png",
+	"OSM Belgium Archive - September 2024": L.tileLayer(
+      "https://tile.osm.be/archive/202409/{z}/{x}/{y}.png",
       {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
-    ),
+    ),       
     "OSM Belgium Archive - January 2022": L.tileLayer(
       "https://tile.osm.be/archive/202201/{z}/{x}/{y}.png",
       {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
       }
-    ),   
+    ),
+	"OSM Belgium Archive - November 2020": L.tileLayer(
+      "https://tile.osm.be/archive/202011/{z}/{x}/{y}.png",
+      {
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        maxZoom: 18
+      }
+    ),	
+	"OSM Belgium Archive - March 2019": L.tileLayer(
+      "https://tile.osm.be/archive/201903/{z}/{x}/{y}.png",
+      {
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://tile.openstreetmap.be">Tiles</a> courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        maxZoom: 18
+      }
+    ),
+	
     "Most recent aerial imagery (FL+WAL)": L.layerGroup([
 	L.tileLayer(
 	"https://geo.api.vlaanderen.be/OFW/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ofw&STYLE=&FORMAT=image/png&tileMatrixSet=GoogleMapsVL&tileMatrix={z}&tileRow={y}&tileCol={x}",
